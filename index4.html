@@ -1,0 +1,204 @@
+!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="imagine/Favicon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="kurs2.css">
+<title>Персонажи сериалов</title>
+
+</head>
+<body>
+<div class="header">
+            <header>
+                <div class="header_logo"><img src="image/logo.png" width="40px"></div>
+                <div>
+                    <nav><ul class="header_menu">
+                        <li class="header_menu_elem"><a href="index.html" class ="header_menu_link">Главная</a></li>
+                        <li class="header_menu_elem"><a href="#top" class ="header_menu_link">Каталог</a></li>
+                        <li class="header_menu_elem"><a href="kurs.html" class ="header_menu_link">Личный кабинет</a></li>
+                        <li class="header_menu_elem"><a href="index3.html" class ="header_menu_link">Новогодяя страница</a></li>
+                    </ul></nav>
+                </div>
+                
+                <div class="header_reg">
+                    <ul class="reg_list">
+                        <li><a href="index2.html">Вход</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                <button class="buttonz" onclick="stop()" style="border-left:1px solid #0d8bf2">
+                <i class="fa fa-caret-down"></i>
+                <img  src="image/notice0.png" alt="Уведомления" width="45px" id="notice">
+                </button>
+                <div class="dropdown-content">
+                    <div> Уведомления </div>
+                </div>
+                <script src="notices.js"></script>
+                </div>
+            </header>
+        </div>
+    
+        <div id="okno3">
+            <div class="content_box">
+            <div class="row">
+            
+            </div>
+
+            
+            <div class="container_text" style="text-align:center">
+              <h2 id="container_text_h"></h2>
+              <p id="container_text_p"></p>
+              </div>
+              <a href="#" class="close">&#10006</a>
+            </div>
+            
+            <div class="container">
+              <span onclick="this.parentElement.style.display='none'" class="closebtn"><p>×</p></span>
+              <img id="expandedImg">
+            </div>
+
+            <script>
+            function add_img(num){
+                document.querySelector(".row").remove();
+                var gallery_div = document.createElement("div");
+                gallery_div.className="row";
+                document.querySelector("#okno3").prepend(gallery_div);
+                if (num == 1){
+                    var nam = "imagine/news1/";
+                    document.querySelector("#container_text_h").textContent="Маленькие женщины";
+                    document.querySelector("#container_text_p").textContent="Фотосессия трех сестер в рамках нового проекта";
+                }
+                if (num == 2){
+                    var nam = "imagine/news2/";
+                    document.querySelector("#container_text_h").textContent="Болтун";
+                    document.querySelector("#container_text_p").textContent="Кадры Ли Чон Сока из новой дорамы          ";
+                }
+                if (num == 3){
+                    var nam = "imagine/news3/";
+                    document.querySelector("#container_text_h").textContent="Пентхаус";
+                    document.querySelector("#container_text_p").textContent="Ли Чжи А и Пак Ын Сок в свадебной фотосессии для дорамы";
+                }
+                for(let i = 1; i <= 10; i++){
+                    let n = nam +i+".jpg";
+                    console.log(n);
+                   
+                    gallery_div = document.createElement("div"); 
+                    gallery_div.className="column";
+                    document.querySelector(".row").append(gallery_div);
+                    var gallery = document.createElement("img");
+                    gallery.setAttribute("onclick", "myFunction(this);");
+                    gallery.src=n;
+                    gallery.style="width:100%";
+                    gallery_div.append(gallery);
+                }
+                console.log(document.querySelectorAll(".coloumn").childNodes)
+            }
+            function myFunction(imgs) {
+                console.log("1");
+                var expandImg = document.getElementById("expandedImg");
+                expandImg.src = imgs.src;
+                expandImg.parentElement.style.display = "block";
+            }
+            </script>
+        </div>
+<main>
+   <style>
+       .kart{
+           width: 250px;
+           height: 350px
+           
+       }
+       .sp{
+           display: inline-block;
+           list-style-type: none;
+       }
+       .sp p{
+           position: absolute;
+           background-color: rgba(0, 0, 0, 0.8);
+           width: 240px;
+           padding: 5px;
+       }
+       .sp li{
+           float:left;
+           margin: 20px;
+           
+       }
+       .sp li:hover{
+           opacity: 0.5;
+       }
+       
+       main{
+           margin-top: 60px;
+       }
+       @media(max-width:600px){
+           main{
+           margin-top: 0;
+       }
+       }
+    </style>
+    <h3><center>Здесь вы увидите весь доступный арсеналА:</center></h3>
+                <ol class = "sp">
+                    <li><p>Необычный адвокат У Ён У</p>
+                    <img class="kart" src="imagine/aside/woo-young-woo.jpeg" alt="У Ён У"></li>
+
+                    <li><p>Легенда о Кумихо</p>
+                    <img class="kart" src="imagine/aside/khumiho.jpg" alt="Легенда о Кумихо"></li>
+
+                    <li><p>Гоблин</p>
+                    <img class="kart" src="imagine/aside/goblin.jpg" alt="Гоблин"></li>
+
+                    <li><p>Дом на месяц</p>
+                    <img class="kart" src="imagine/aside/dom_na_mesyac.jpeg" alt="Дом на месяц"></li>
+
+                    <li><p>Работай позже, пей сейчас</p>
+                    <img class="kart" src="imagine/aside/rabotay_pozje.jpeg" alt="Работай позже, пей сейчас"></li>
+
+                    <li><p>Однажды разрушение вошло в дверь моего дома</p>
+                    <img class="kart" src="imagine/aside/doom-at-your-service.jpeg" alt="Однажды разрушение вошло в дверь моего дома"></li>
+
+                    <li><p>Силачка До Бон Сун</p>
+                    <img class="kart" src="imagine/aside/silachka-do-bon-sun.jpg" alt="До Бон Сун"></li>
+
+                    <li><p>Подснежник</p>
+                    <img class="kart" src="imagine/aside/podsnejnik.jpeg" alt="Подснежник"></li>
+
+                    <li><p>Майская юность</p>
+                    <img class="kart" src="imagine/aside/maiskaya_unost.png" alt="Майская юность"></li>
+
+                    <li><p>Болтун</p>
+                    <img class="kart" src="imagine/aside/big_mouse.jpeg" alt="Большая мышь"></li>
+
+                    <li><p>Маленькие женщины</p>
+                    <img class="kart" src="imagine/aside/little_women.webp" alt="Маленькие женщины"></li>
+                </ol>
+    <article class="div2">
+        <div class="elem-kd">
+            <div class="kda">
+            <div class="inka">
+               <h3 class="kda-title">Маленькие женщины</h3>
+               
+               <p class="kda-title">Фотосессия трех сестер</p>
+               <a id="kda1" href="#okno3" onclick="add_img(1)">Подробнее</a>
+        </div>
+    </div>
+            <div class="kda">
+          <div class="inka">
+           <h3 class="kda-title">Болтун</h3>
+           <p class="kda-title">Ли Чон Сок в новой дораме</p>
+           <a id="kda1" href="#okno3" onclick="add_img(2)">Подробнее</a>
+            </div>
+        </div>
+            <div class="kda">
+            <div class="inka">
+                <h3 class="kda-title">Пентхаус</h3>
+                <p class="kda-title">Ли Чжи А и Пак Ын Сок в свадебной фотосессии для дорамы</p>
+                <a id="kda1" href="#okno3" onclick="add_img(3)">Подробнее</a>
+            </div>
+            </div>
+        </div>
+        </article>
+</main>
+</body>
+</html>

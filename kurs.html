@@ -3,12 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Фан страничка Пентхаус</title>
+		<title>Персонажи Дисней</title>
 		<link rel="stylesheet" href="kurs2.css">
 		<link rel="stylesheet" href="style3.css">
 		<link rel="icon" type="image/png" href="imagine/Favicon.png"/>
 	</head>
   <body>
+       <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span></label>
         <div class="header">
             <header>
                 <div class="header_logo"><img src="image/logo.png" width="40px"></div>
@@ -16,8 +19,9 @@
                     <nav><ul class="header_menu">
                         <li class="header_menu_elem"><a href="index.html" class ="header_menu_link">Главная</a></li>
                         <li class="header_menu_elem"><a href="index4.html" class ="header_menu_link">Каталог</a></li>
-                        <li class="header_menu_elem"><a href="#top" class ="header_menu_link">Личный кабинет</a></li>
                         <li class="header_menu_elem"><a href="index3.html" class ="header_menu_link">Новогодяя страница</a></li>
+                        <li class="header_menu_elem"><a href="#top" class ="header_menu_link">Личный кабинет</a></li>
+                        
                     </ul></nav>
                 </div>
                 
@@ -27,7 +31,7 @@
                     </ul>
                 </div>
                 <div class="dropdown">
-                <button class="buttonz" onclick="stop()" style="border-left:1px solid #0d8bf2">
+                <button class="buttonz" onclick="stop()">
                 <i class="fa fa-caret-down"></i>
                 <img  src="image/notice0.png" alt="Уведомления" width="45px" id="notice">
                 </button>

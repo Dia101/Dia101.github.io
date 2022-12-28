@@ -3,287 +3,17 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="imagine/Favicon.png"/>
-    <title>Персонажи сериалов</title>
-<link rel="icon" type="image/png" href="imagine/Favicon.png"/>
-
-    <style>
-    a{
-    text-decoration: none;
-    color: black;
-}
-
-:root{
-    --main-bg-color: #252626;
-    --main-block-bg-color: #f4cb7d;
-    --main-elem-color: rgba(82, 47, 0, 0.43);
-    --main-text-color: #000000;
-    --header-bg-color: #202625; 
-}
-
-::-webkit-scrollbar {
-  width: 0;
-}
-
-.header{
-    position: fixed;
-    top:0;
-    left: 0;
-    background-color: #6c4b1e;
-    z-index: 3;
-    width: 100%;
-    display: inline-block;
-    border-bottom-style: groove;
-    border-bottom-color: #522f00;
-    border-bottom-width:thick;
-}
-
-.header_container{
-    position: relative;
-    
-}
-
-.header_logo > img{
-    margin-left: 20px;
-    bottom: 0;
-    width: 50px;
-    float: left;
-}
-
-.header_menu{
-    float: left;
-    list-style: none;
-    position: inherit;
-    height: 100%;
-    border: none;
-}
-
-.header_menu_link{
-    text-decoration: none;
-    color: var(--main-text-color);
-    padding: 17px;
-    
-}
-    
-.header_menu_link:hover{
-    background-color: var(--main-elem-color);
-}
-
-.header_menu_elem{
-    display: inline-block;
-}
-.reg_list{
-    list-style: none;
-    padding: 0;
-}
-
-.header_reg_container{
-    background-color: aliceblue;
-    float:right;
-}
-
-.header_reg{
-    float:right;
-    border-color: black;
-    border: none;
-    height: 100%;
-    bottom:0;
-    padding: 0 30px;
-    margin-right: 20px;
-}
-
-.header_reg:hover{
-    background-color: var(--main-elem-color);
-   
-}
-.header_reg > a{
-    height: 100%;
-    padding: 0px;
-    color: var(--main-text-color);
-}
-
-/*Уведомления*/
-
-.button_notice:active{
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-}
-
-.button_notice{
-    position: absolute;
-    background:none;
-    border: none;
-    right: 5px;
-    
-}
-.buttonz {
-    background: none;
-    border: none;
-    margin: 0 20 px;
-    bottom:0;
-}
-
-.dropdown {
-    float: right;
-    height: 100%;
-    
-}
-
-.dropdown-content{
-    color:black;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--main-block-bg-color);
-    border-radius: 5px;
-    min-width: 50px;
-    z-index: 3;
-    border-style: groove;
-    border-color: #522f00;
-    border-width:thick;
-}
-
-.dropdown-content a {
-    color: black;
-    text-decoration: none;
-    padding: 0px 10px;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    border-radius: 5px;
-    background-color: var(--main-elem-color);
-    
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.buttonz:hover, .button {
-    background-color: var(--main-elem-color);
-}
-
-.buttonz:active, .button {
-    background-color: var(--main-elem-color);
-}</style>
-
-<style>   
-    main{
-        margin-top: 100px;
-        position: relative;
-    }
-    #dragObjects > img{
-        opacity: 0.8;
-        border-radius: 10px;
-    }
-    
-    #canvas{
-        position: absolute;
-        left: 15px;
-        top:0;
-    }
-    
-.column {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial;
-    background-color: #796648;
-}
-.content_box > div{
-    width: 50%;
-    margin: auto;
-}
-
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
-}
-
-.column img {
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.column img:hover {
-    opacity: 1;
-    
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.container {
-    position: relative;
-    display: none;
-}
-
-#imgtext {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    border-radius: 10px;
-    
-    font-size: 20px;
-}
-    
-#expandedImg{
-    border-radius: 30px;
-}
+    <title>Персонажи Дисней</title>
+    <link rel="icon" type="image/png" href="imagine/Favicon.png"/>
+    <link rel="stylesheet" href="style4.css">
 
 
-    
-.closebtn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
-    padding: 0 10px;
-}
-    
-.closebtn:hover{
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-}    
-
-@media (max-width: 650px){
-   .content_box > div{
-       width: 100%;}
-    #canvas{
-           width: 70px;
-            height: 70px;
-            left: 10px;
-            top:-20px;
-       }
-    #snow-flake-app{
-        height: 1000px;
-    }
-    .header{display:none}
-    main{margin-top: 0}
-}
-    
-@media (max-width: 450px){
-    #canvas{
-           display: none;
-       }
-}
-</style>
 </head>
 <body>
+<input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
 <div class="header">
             <header>
                 <div class="header_logo"><img src="image/logo.png" width="40px"></div>
@@ -291,8 +21,8 @@ body {
                     <nav><ul class="header_menu">
                         <li class="header_menu_elem"><a href="index.html" class ="header_menu_link">Главная</a></li>
                         <li class="header_menu_elem"><a href="index4.html" class ="header_menu_link">Каталог</a></li>
-                        <li class="header_menu_elem"><a href="kurs.html" class ="header_menu_link">Личный кабинет</a></li>
                         <li class="header_menu_elem"><a href="#top" class ="header_menu_link">Новогодяя страница</a></li>
+                         <li class="header_menu_elem"><a href="kurs.html" class ="header_menu_link">Личный кабинет</a></li>
                     </ul></nav>
                 </div>
                 
@@ -302,7 +32,7 @@ body {
                     </ul>
                 </div>
                 <div class="dropdown">
-                <button class="buttonz" onclick="stop()" style="border-left:1px solid #0d8bf2">
+                <button class="buttonz" onclick="stop()">
                 <i class="fa fa-caret-down"></i>
                 <img  src="image/notice0.png" alt="Уведомления" width="45px" id="notice">
                 </button>
@@ -313,8 +43,9 @@ body {
                 </div>
             </header>
         </div>
+        
 <main>
-<canvas id="snow-flake-app" style="position: absolute; top:0; left:0; z-index: -1; height: 190%"></canvas>
+<canvas id="snow-flake-app" style="position: absolute; top:0; left:0; z-index: -1; height: 100%"></canvas>
 
 <script>
 window.animation_config = {
@@ -451,23 +182,23 @@ window.animation_config = {
 
 
 
-<div style="text-align:center; background-color: rgba(0, 0, 0, 0.3); color:white">
-  <h2>Маленькие женщины</h2>
+<div class="name_text">
+  <h2>Микки Маус</h2>
 </div>
 
 <div class="content_box">
 <div class="row">
   <div class="column">
-    <img src="image/5.jpg" alt="О Ин-Ген" style="width:100%" onclick="myFunction(this);">
+    <img src="image/1.png" alt="Дональд Дак" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="image/2.jpg" alt="О Ин-Хе" style="width:100%" onclick="myFunction(this);">
+    <img src="image/2.png" alt="Минни Маус" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="image/3.jpg" alt="О Ин-Джу" style="width:100%" onclick="myFunction(this);">
+    <img src="image/3.png" alt="Микки Маус" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="image/4.jpg" alt="Чо До-Иль" style="width:100%" onclick="myFunction(this);">
+    <img src="image/4.png" alt="Гуфи" style="width:100%" onclick="myFunction(this);">
   </div>
 </div>
 
@@ -487,28 +218,27 @@ function myFunction(imgs) {
     expandImg.parentElement.style.display = "block";
 }
 </script>
-
+<div class="name_text">
+  <h2>Принцессы Дисней</h2>
+</div>
 <br>
 <div id="shop">
    <div id="dragObjects">
-       <img src="image/books/1.jpeg" alt="Суровое испытание">
-       <img src="image/books/2.jpeg" alt="Потомки солнца">
-       <img src="image/books/3.jpeg" alt="Гоблин">
-       <img src="image/books/4.jpeg" alt="Наше счастливое время">
-       <img src="image/books/5.jpeg" alt="Поразительное на каждом шагу">
-       <img src="image/books/6.jpeg" alt="Король: Вечный монарх">
-       <img src="image/books/7.jpeg" alt="Гоблин">
-       <img src="image/books/8.jpeg" alt="Мистер солнечный свет">
+       <img src="image/books/1.jpg" alt="Урсула">
+       <img src="image/books/2.jpg" alt="Симба">
+       <img src="image/books/3.jpg" alt="Момоа">
+       <img src="image/books/4.jpg" alt="Алладин">
+       <img src="image/books/5.jpg" alt="Тимон">
+       <img src="image/books/6.jpg" alt="Винни Пух">
+       <img src="image/books/7.jpg" alt="Черный плащ">
+       <img src="image/books/8.jpg" alt="Майк Вазовски">
    </div>
    <img src="image/korz.png" id="trash" style="width:200px; background-color: rgba(0, 0, 0, 0.2); border-radius: 30px; padding-left: 10px;">
 </div>
-<ul class="ul" style="border-style: groove; background-color: rgba(0, 0, 0, 0.2); border-color: (0, 0, 0, 0.3); color: white; border-radius: 20px; width: 200px">
+<ul class="ul">
     <li>Название книг:</li>
 </ul>
 
- <style>
-.uponMe { background-color: rgba(0, 0, 0, 0.5); }
-</style>
 
 <script>
 onload = function() {
@@ -691,28 +421,22 @@ onload = function() {
 
 	
 	function getCurrentTarget(e) {
-		// спрятать объект, получить элемент под ним - и тут же показать опять
 		
 		if (navigator.userAgent.match('MSIE') || navigator.userAgent.match('Gecko')) {
 			var x=e.clientX, y=e.clientY
 		} else {
 			var x=e.pageX, y=e.pageY
 		}
-		// чтобы не было заметно мигание - максимально снизим время от hide до show
 		dragObject.hide()
 		var elem = document.elementFromPoint(x,y)
 		dragObject.show()
 		
-		// найти самую вложенную dropTarget
-		while (elem) {
-			// которая может принять dragObject 
+		while (elem) { 
 			if (elem.dropTarget && elem.dropTarget.canAccept(dragObject)) {
 				return elem.dropTarget
 			}
 			elem = elem.parentNode
 		}
-		
-		// dropTarget не нашли
 		return null
 	}
 
@@ -737,18 +461,13 @@ onload = function() {
 </script>
 <script>
     function fixEvent(e) {
-	// получить объект событие для IE
 	e = e || window.event
-
-	// добавить pageX/pageY для IE
 	if ( e.pageX == null && e.clientX != null ) {
 		var html = document.documentElement
 		var body = document.body
 		e.pageX = e.clientX + (html && html.scrollLeft || body && body.scrollLeft || 0) - (html.clientLeft || 0)
 		e.pageY = e.clientY + (html && html.scrollTop || body && body.scrollTop || 0) - (html.clientTop || 0)
 	}
-
-	// добавить which для IE
 	if (!e.which && e.button) {
 		e.which = e.button & 1 ? 1 : ( e.button & 2 ? 3 : ( e.button & 4 ? 2 : 0 ) )
 	}
@@ -792,7 +511,7 @@ function getOffsetSum(elem) {
 }
     </script>
 
-<canvas id="canvas" width="150px" height="150px" style="background-color: #584323; border-radius: 50%"></canvas>
+<canvas id="canvas" width="150px" height="150px"></canvas>
 
 <script>
   function clock(){
@@ -804,7 +523,6 @@ function getOffsetSum(elem) {
   ctx.scale(0.45,0.45);
   ctx.rotate(-Math.PI/2);
   ctx.strokeStyle = "white";
-  ctx.fillStyle = "white";
   ctx.lineWidth = 8;
   ctx.lineCap = "round";
 
@@ -838,8 +556,6 @@ function getOffsetSum(elem) {
   var hr  = now.getHours();
   hr = hr>=12 ? hr-12 : hr;
 
-  ctx.fillStyle = "black";
-
   // write Hours
   ctx.save();
   ctx.rotate( hr*(Math.PI/6) + (Math.PI/360)*min + (Math.PI/21600)*sec )
@@ -863,8 +579,8 @@ function getOffsetSum(elem) {
   // Write seconds
   ctx.save();
   ctx.rotate(sec * Math.PI/30);
-  ctx.strokeStyle = "rgba(0, 0, 0, 0.4)";
-  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+  ctx.strokeStyle = "#5d92db";
+  ctx.fillStyle = "#5d92db";
   ctx.lineWidth = 6;
   ctx.beginPath();
   ctx.moveTo(-30,0);
@@ -876,14 +592,14 @@ function getOffsetSum(elem) {
   ctx.beginPath();
   ctx.arc(95,0,10,0,Math.PI*2,true);
   ctx.stroke();
-  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+  ctx.fillStyle = "#5d92db";
   ctx.arc(0,0,3,0,Math.PI*2,true);
   ctx.fill();
   ctx.restore();
 
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = 'rgba(0, 0, 0, 0.4)';
+  ctx.strokeStyle = '#5d92db';
   ctx.arc(0,0,142,0,Math.PI*2,true);
   ctx.stroke();
 
@@ -895,6 +611,8 @@ function getOffsetSum(elem) {
 window.requestAnimationFrame(clock);
 
 </script>
+ 
+ 
 
  </main>   
 </body>

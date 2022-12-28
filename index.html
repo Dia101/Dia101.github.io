@@ -3,21 +3,18 @@
     <head>
         <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Персонажи сериалов</title>
+		<title>Персонажи Дисней</title>
 <link rel="icon" type="image/png" href="imagine/Favicon.png"/>
 		<link rel="stylesheet" href="kurs.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="kurs2.css">
 		<link rel="icon" type="image/png" href="imagine/Favicon.png"/>
 	</head>
 	<body>
-        <!--<nav  id="menu" class="div5">
-        <ul>
-            <p><center>Меню страницы</center><p>
-            <li><a href="#contacts" class="a">Контакты</a></li>
-            <li><a href="#persons" class="a">Персонажи</a></li>
-            <li><a href="#themes" class="a">Термины</a></li>
-        </ul>
-        </nav>-->
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
         <div class="header">
             <header>
                 <div class="header_logo"><img src="image/logo.png" width="40px"></div>
@@ -25,8 +22,9 @@
                     <nav><ul class="header_menu">
                         <li class="header_menu_elem"><a href="#top" class ="header_menu_link">Главная</a></li>
                         <li class="header_menu_elem"><a href="index4.html" class ="header_menu_link">Каталог</a></li>
-                        <li class="header_menu_elem"><a href="kurs.html" class ="header_menu_link">Личный кабинет</a></li>
+                        
                         <li class="header_menu_elem"><a href="index3.html" class ="header_menu_link">Новогодяя страница</a></li>
+                        <li class="header_menu_elem"><a href="kurs.html" class ="header_menu_link">Личный кабинет</a></li>
                     </ul></nav>
                 </div>
                 
@@ -36,7 +34,7 @@
                     </ul>
                 </div>
                 <div class="dropdown">
-                <button class="buttonz" onclick="stop()" style="border-left:1px solid #0d8bf2">
+                <button class="buttonz" onclick="stop()">
                 <i class="fa fa-caret-down"></i>
                 <img  src="image/notice0.png" alt="Уведомления" width="45px" id="notice">
                 </button>
@@ -75,18 +73,18 @@
                 document.querySelector("#okno3").prepend(gallery_div);
                 if (num == 1){
                     var nam = "imagine/news1/";
-                    document.querySelector("#container_text_h").textContent="Маленькие женщины";
-                    document.querySelector("#container_text_p").textContent="Фотосессия трех сестер в рамках нового проекта";
+                    document.querySelector("#container_text_h").textContent="Чип и Дейл спешат на помощь";
+                    document.querySelector("#container_text_p").textContent="Кадры из нового фильма. Премьера 2022 г.";
                 }
                 if (num == 2){
                     var nam = "imagine/news2/";
-                    document.querySelector("#container_text_h").textContent="Болтун";
-                    document.querySelector("#container_text_p").textContent="Кадры Ли Чон Сока из новой дорамы          ";
+                    document.querySelector("#container_text_h").textContent="Аватар: путь воды";
+                    document.querySelector("#container_text_p").textContent="Кадры из нового фильма. Премьера 2022 г.";
                 }
                 if (num == 3){
                     var nam = "imagine/news3/";
-                    document.querySelector("#container_text_h").textContent="Пентхаус";
-                    document.querySelector("#container_text_p").textContent="Ли Чжи А и Пак Ын Сок в свадебной фотосессии для дорамы";
+                    document.querySelector("#container_text_h").textContent="Пиноккио";
+                    document.querySelector("#container_text_p").textContent="Кадры из нового фильма. Премьера 2022 г.";
                 }
                 for(let i = 1; i <= 10; i++){
                     let n = nam +i+".jpg";
@@ -116,99 +114,94 @@
         <div class="elem-kd">
             <div class="kda">
             <div class="inka">
-               <h3 class="kda-title">Маленькие женщины</h3>
+               <h3 class="kda-title">Чип и Дейл спешат на помощь</h3>
                
-               <p class="kda-title">Фотосессия трех сестер</p>
+               <p class="kda-title">Дата выхода: 20 мая 2022 г.</p>
                <a id="kda1" href="#okno3" onclick="add_img(1)">Подробнее</a>
         </div>
     </div>
             <div class="kda">
           <div class="inka">
-           <h3 class="kda-title">Болтун</h3>
-           <p class="kda-title">Ли Чон Сок в новой дораме</p>
+           <h3 class="kda-title">Аватар: путь воды</h3>
+           <p class="kda-title">Дата выхода: 16 декабря 2022 г.</p>
            <a id="kda1" href="#okno3" onclick="add_img(2)">Подробнее</a>
             </div>
         </div>
             <div class="kda">
             <div class="inka">
-                <h3 class="kda-title">Пентхаус</h3>
-                <p class="kda-title">Ли Чжи А и Пак Ын Сок в свадебной фотосессии для дорамы</p>
+                <h3 class="kda-title">Пиноккио</h3>
+                <p class="kda-title">Дата выхода: 8 сентября 2022 г.</p>
                 <a id="kda1" href="#okno3" onclick="add_img(3)">Подробнее</a>
             </div>
             </div>
         </div>
         </article>
-		<article>
+		<article class="text">
 			<section>
                 <h1><b><center>Добро пожаловать <sup>:)</sup><sub>(:</sub></center></b></h1>
-				<p><b><em>Дорама «Пентхаус» рассказывает историю женщины, которая стремится достичь
-своей цели попасть в высшее общество, став <i>королевой</i> в  пентхаусе на 100-м
-этаже в Каннаме, вершине успеха в ее глазах, а также о женщинах, у которых
-не было другого выбора, кроме стать злодеями, чтобы защитить себя</em></b></p>
+				<p><b><em>В жизни каждого из нас присутствовали мультики. Если вы зашли на этот сайт - вы выбрали Дисней. Представляем вам самых популлярных персонажей. С нашим сайтом вы сможете вновь погрузиться в ту самую радостную детскую атмосферу</em></b></p>
             </section>
             </article>
             <article class="pers_container">   
             <h2 id="persons"><em><center>Давайте ознакомимся с основными персонажами</center></em></h2>
-			<p><b><em>Итак, вот их список:</em></b></p>
 			<ol>
 				<section>
-                    <li><h4><cite><b><u>Джу Дан Тэ</u></b></cite></h4>
+                    <li><h4><cite><b><u>Микки Маус</u></b></cite></h4>
                     <form action="" method="get">
                         <p>
-                           Нажми, чтобы поставить сердечко Джу Дан Тэ
+                           Нажми, чтобы поставить сердечко Микки
                             <button name="Heart" type="button" id="button1"> <img src="imagine/heart.png" width="25px"></button>
                         </p>
                     </form></li>
-					<img src="imagine/persons/uhm-ki-joon.jpg" alt="Фото Джу Дан Тэ" class="circle">
+					<img src="imagine/persons/mickey.jpg" alt="Микки Маус" class="circle">
 					<p><em><b>Немного о персонаже:</b></em><p>
 					<ul>
-						<li><em><b>Владелец пентхауса</b></em></li>
-						<li><em><b>Самый безжалостный герой</b></em></li>
-						<li><em><b>Хладнокровный убийца</b></em></li>
-						<li><em><b>Гениальный стратег</b></em></li>
+						<li><em><b>Прообраз	- Кролик Освальд</b></em></li>
+						<li><em><b> Дата рождения: 18 ноября 1928</b></em></li>
+						<li><em><b>Есть питомец Плуто</b></em></li>
+						<li><em><b>Имя отца - Макс</b></em></li><li><em><b>Имя матери - Мэри</b></em></li>
 					</ul>
 				</section>
 
 				<section>
-                    <li><h4><cite><b><u>Сим Су Рен</u></b></cite></h4></li>
+                    <li><h4><cite><b><u>Белоснежка</u></b></cite></h4></li>
                     <form action="" method="get">
                         <p>
-                           Нажми, чтобы поставить сердечко Сим Су Рен
+                           Нажми, чтобы поставить сердечко Белоснежке
                             <button name="Heart" type="button" id="button2" > <img src="imagine/heart2.png" width="20px"></button>
                         </p>
                     </form>
-					<cite id="citat"><blockquote><b>Есть ли грех только тогда, когда есть улики?</b></blockquote></cite>
-					<img src="imagine/persons/li_ji_a.webp" alt="Фото Сим Су Рен" class="circle">
+					<cite class="citat"><blockquote><b>Помни: ты единственный, кто сможет наполнить этот мир солнечным светом</b></blockquote></cite>
+					<img src="imagine/persons/snow%20white.jpg" alt="Фото Сим Су Рен" class="circle">
 					<p><em><b>Немного о персонаже:</b></em><p>
 					<ul>
-						<li><em><b>Бывшая жена злодея</b></em></li>
-						<li><em><b>Олицетворение добра</b></em></li>
-						<li><em><b>Прекрасная мать</b></em></li>
-						<li><em><b>Главный противник зла</b></em></li>
+						<li><em><b>Добрая и тихая принцесса</b></em></li>
+						<li><em><b>Любит животных</b></em></li>
+						<li><em><b>Мать - ужасная злая мачеха</b></em></li>
+						<li><em><b>Живет с 7 гномами</b></em></li><li><em><b>Была отравлена яблоком</b></em></li>
 				    </ul>
 				</section>
 				
 				<section>
-					<li><h4><cite><b><u>Ли Гю Джин</u></b></cite></h4></li><br>
-					<img src="imagine/persons/bong-tae_gyu.jpg" alt="Фото Ли Гю Джин" class="circle">
+					<li><h4><cite><b><u>Круэлла</u></b></cite></h4></li><br>
+					<img src="imagine/persons/kruella.jpg" alt="Круэлла" class="circle">
                     <p><em><b>Немного о персонаже:</b></em></p>
 					<ul>
-						<li><em><b>Во всем следует своей маме</b></em></li>
-						<li><em><b>Прекрасный оратор</b></em></li>
-						<li><em><b>Вторая рука зла</b></em></li>
-						<li><em><b>Изощренный мошенник</b></em></li>
+						<li><em><b>Высокая худая женщина</b></em></li>
+						<li><em><b>Имеет экстравагантную стрижку</b></em></li>
+						<li><em><b>С угловатым лицом и широкими скулами</b></em></li>
+						<li><em><b>Основная одежда - длинное черное платье и меховая шуба</b></em></li>
 					</ul>
 				</section>
 				
 				<section>
 					<li><h4><cite><b><u>Ха Юн Чхоль</u></b></cite></h4></li><br>
-					<img src="imagine/persons/ha-un-chol.jpg" alt="Фото Ха Юн Чхоль" class="circle">
+					<img src="imagine/persons/Bambi.jpg" alt="Фото Ха Юн Чхоль" class="circle">
                     <p><em><b>Немного о персонаже:</b></em></p>
 					<ul>
-						<li><em><b>Великолепный хирург</b></em></li>
-						<li><em><b>Нерешительный и двуличный</b></em></li>
-						<li><em><b>Одновременно прекрасный и ужасный отец</b></em></li>
-						<li><em><b>Пример человека, поддающегося грехам и <br> пытающегося следовать принципам морали</b></em></li>
+						<li><em><b>Добрый милый олененок</b></em></li>
+						<li><em><b>Подрос и встретил хороших друзей</b></em></li>
+						<li><em><b>На пути пришлось столкнуться с опасностями</b></em></li>
 					</ul>
 				</section>
 			</ol>
@@ -218,29 +211,29 @@
 		        <dev class="card">
                    <div class="hover-text-one">
                       <figure class="effect-text-one">
-                        <img src="https://i.pinimg.com/236x/1e/d7/bb/1ed7bb57ca12689bfc331c2b21657efc.jpg" alt=""/>
+                        <img src="imagine/persons/Elsa.jpg" alt="Эльза"/>
                           <figcaption>
-                        <h3>Сим Су Рен</h3>
-                        <p>Сестра-близнец На Эгё, главная героиня</p>
+                        <h3>Эльза</h3>
+                        <p>Героиня фильма "Холодная сердцем"</p>
                           </figcaption>			
                       </figure>
                     </div>
                     <div class="hover-text-one">
                       <figure class="effect-text-one">
-                        <img src="imagine/persons/Min_Sol_La.png" alt=""/>
+                        <img src="imagine/persons/rapuntsel.jpg" alt=""/>
                           <figcaption>
-                        <h3>Мин Со-Ля</h3>
-                        <p class="str_card2">Была скинута с 47 этажа пентхауса</p>
+                        <h3>Рапунцель</h3>
+                        <p class="str_card2">Необыкновенная длинноволосая принцесса</p>
                          
                           </figcaption>			
                       </figure>
                     </div>
                     <div class="hover-text-one">
                       <figure class="effect-text-one">
-                        <img src="https://i.pinimg.com/564x/00/6d/9c/006d9c63aa99e954a75a39adc4cd359d.jpg" alt=""/>
+                        <img src="imagine/persons/merida.jpg" alt=""/>
                           <figcaption>
-                        <h3>На Эгё</h3>
-                        <p>Была убита Джу Дан Тэ</p>
+                        <h3>Мерида</h3>
+                        <p>Героиня фильма "Храбрая сердцем"</p>
                           </figcaption>			
                       </figure>
                     </div>
@@ -248,60 +241,47 @@
 		    </section>
 		</article>
     <div class="terms">
-		<h3 id="themes" >Термины</h3>
-		<dl>
-			<dt>Дорама (япон. テレビドラマ, англ. drama) —</dt>
-			<dd>Общее название восточноазиатских телесериалов</dd>
-
-			<dt>Каннам —</dt>
-			<dd id="log"><br>Район в юго-восточной части Сеула, столицы <br> Республики Корея. Имеет статус самоуправления.</dd><br>
-			<img id="cat" src="imagine/map.png" alt="Крата Каннам" usemap="#gangnam">
-			<map name="gangnam">
-				<area title="Каннам" href="https://translated.turbopages.org/proxy_u/en-ru.ru.3f03f835-6322db47-2e103fd6-74722d776562/https/en.wikipedia.org/wiki/Gangnam_(Seoul)" coords="356,264,18" shape="circle">
-    			<area title="Сеул" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%83%D0%BB" coords="243,6,114,58" shape="rectangle">
-			</map>
-
-			<dt>Термин —</dt>
-			<dd>слово или словосочетание (условное выражение), являющееся названием строго определённого понятия какой-нибудь области науки, техники, искусства и так далее</dd>
-		</dl>
+		<h3 id="themes" >Создатель</h3>
+		<p style="font-size: 23px;">Уолт Дисней</p>
+		<img src="imagine/persons/WaltDisney.JPG" style="border-radius: 20px; border-style: double; border-color: aliceblue">
 	</div>
   
 	    </main>
         <aside>
-            <h3><center>Список дорам:</center></h3>
+            <h3><center>Список фильмов:</center></h3>
                 <ol>
-                    <li>Необычный адвокат У Ён У</li>
-                    <img class="kart" src="imagine/aside/woo-young-woo.jpeg" alt="У Ён У">
+                    <li>Энканто</li>
+                    <img class="kart" src="imagine/aside/encanto.jpg" alt="Энканто">
 
-                    <li>Легенда о Кумихо</li>
-                    <img class="kart" src="imagine/aside/khumiho.jpg" alt="Легенда о Кумихо">
+                    <li>Головоломка</li>
+                    <img class="kart" src="imagine/aside/inside_out.jpg" alt="Головоломка">
 
-                    <li>Гоблин</li>
-                    <img class="kart" src="imagine/aside/goblin.jpg" alt="Гоблин">
+                    <li>Тайна Коко</li>
+                    <img class="kart" src="imagine/aside/koko.jpg" alt="Тайна Коко">
 
-                    <li>Дом на месяц</li>
-                    <img class="kart" src="imagine/aside/dom_na_mesyac.jpeg" alt="Дом на месяц">
+                    <li>Университет монстров</li>
+                    <img class="kart" src="imagine/aside/monsters_university.jpg" alt="Университет монстров">
 
-                    <li>Работай позже, пей сейчас</li>
-                    <img class="kart" src="imagine/aside/rabotay_pozje.jpeg" alt="Работай позже, пей сейчас">
+                    <li>Мулан</li>
+                    <img class="kart" src="imagine/aside/mulan.jpg" alt="Мулан">
 
-                    <li>Однажды разрушение вошло в дверь моего дома</li>
-                    <img class="kart" src="imagine/aside/doom-at-your-service.jpeg" alt="Однажды разрушение вошло в дверь моего дома">
+                    <li>Шанг Чи</li>
+                    <img class="kart" src="imagine/aside/shang-chi.jpg" alt="Шанг Чи">
 
-                    <li>Силачка До Бон Сун</li>
-                    <img class="kart" src="imagine/aside/silachka-do-bon-sun.jpg" alt="До Бон Сун">
+                    <li>Вверх</li>
+                    <img class="kart" src="imagine/aside/up.jpg" alt="Вверх">
 
-                    <li>Подснежник</li>
-                    <img class="kart" src="imagine/aside/podsnejnik.jpeg" alt="Подснежник">
+                    <li>Валли</li>
+                    <img class="kart" src="imagine/aside/wali.jpg" alt="Валли">
 
-                    <li>Майская юность</li>
-                    <img class="kart" src="imagine/aside/maiskaya_unost.png" alt="Майская юность">
+                    <li>Зверополис</li>
+                    <img class="kart" src="imagine/aside/zootopia.jpg" alt="Зверополис">
 
-                    <li>Болтун</li>
-                    <img class="kart" src="imagine/aside/big_mouse.jpeg" alt="Большая мышь">
+                    <li>Лука</li>
+                    <img class="kart" src="imagine/aside/luca.jpg" alt="Лука">
 
-                    <li>Маленькие женщины</li>
-                    <img class="kart" src="imagine/aside/little_women.webp" alt="Маленькие женщины">
+                    <li>Храбрая сердцем</li>
+                    <img class="kart" src="imagine/aside/brave.jpg" alt="Храбрая сердцем">
                 </ol>
             </aside>
     <footer class="div6">
@@ -337,8 +317,8 @@
 	<center>
 	<div class="contents">
 		<address>
-			Посмотреть дораму можно на
-			<a id="a" href="https://softbox.tv/522-penthaus.html">сайте <abbr>SB</abbr></a>
+			Посмотреть фильмы можно на
+			<a id="a" href="https://www.disney.com/">сайте <abbr>Дисней</abbr></a>
 			
 			
 		</address>
